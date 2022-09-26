@@ -1,10 +1,10 @@
-import {client} from "../../lib/client";
+import { client } from "../../lib/client";
 
 export default async function handler(req, res) {
   const response = await client.magicLinks.email.loginOrCreate({
     email: req.body.email,
-    login_magic_link_url: 'http://localhost:3000/api/authenticate',
-    signup_magic_link_url: 'http://localhost:3000/api/authenticate',
+    login_magic_link_url: 'https://nextjs-app-nine-tau.vercel.app/api/authenticate',
+    signup_magic_link_url: 'https://nextjs-app-nine-tau.vercel.app/api/authenticate',
   });
 
   console.log(response);
